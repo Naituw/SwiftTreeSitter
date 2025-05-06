@@ -1,0 +1,3 @@
+[submodule "tree-sitter"]
+	path = tree-sitter
+	url = https://gitee.com/bugtree/tree-sitter-origin.git
