@@ -25,7 +25,7 @@ let package = Package(
         .target(
             name: "SwiftTreeSitter", 
             dependencies: [
-                    .product(name: "TreeSitter", package: "tree-sitter")
+                    .product(name: "tree-sitter", package: "tree-sitter")
                 ]
             ),
         .testTarget(name: "SwiftTreeSitterTests",
