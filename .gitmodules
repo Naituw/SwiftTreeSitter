@@ -13,3 +13,7 @@
 	path = tree-sitter-cpp
 	url = https://gitee.com/bugtree/tree-sitter-cpp.git
 	branch = spm
+[submodule "tree-sitter-objcpp"]
+	path = tree-sitter-objcpp
+	url = https://gitee.com/bugtree/tree-sitter-objcpp.git
+	branch = swiftpm
