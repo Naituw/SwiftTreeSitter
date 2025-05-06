@@ -1,6 +1,7 @@
 [submodule "tree-sitter"]
 	path = tree-sitter
 	url = https://gitee.com/bugtree/tree-sitter-origin.git
+	branch = grammar
 [submodule "tree-sitter-swift"]
 	path = tree-sitter-swift
 	url = https://gitee.com/bugtree/tree-sitter-swift.git
