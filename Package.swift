@@ -7,6 +7,7 @@ let package = Package(
     products: [
         .library(name: "SwiftTreeSitter", targets: ["SwiftTreeSitter"]),
         .library(name: "TreeSitterDocument", targets: ["TreeSitterDocument"]),
+        .library(name: "SwiftTreeSitterGrammars", targets: ["SwiftTreeSitterGrammars"]),
     ],
     dependencies: [
     ],
@@ -42,6 +43,16 @@ let package = Package(
                 cSettings: [.headerSearchPath("src")]),
 
         .target(name: "SwiftTreeSitter", dependencies: ["tree-sitter"]),
+        
+        .target(name: "SwiftTreeSitterGrammars",
+                    dependencies: [
+                        "SwiftTreeSitter", 
+                        "TreeSitterSwift",
+                        "TreeSitterObjC",
+                        "TreeSitterCpp",
+                        "TreeSitterObjCpp"
+                        ]
+                    ),
 
         .testTarget(name: "SwiftTreeSitterTests",
                     dependencies: ["SwiftTreeSitter", "TreeSitterSwift"]),
