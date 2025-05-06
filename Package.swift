@@ -16,16 +16,39 @@ let package = Package(
                 sources: ["src/lib.c"],
                 publicHeadersPath: "include",
                 cSettings: [.headerSearchPath("src/")]),
-        .target(name: "TestTreeSitterSwift",
+
+        .target(name: "TreeSitterSwift",
                 path: "tree-sitter-swift",
                 sources: ["src/parser.c", "src/scanner.c"],
                 publicHeadersPath: "bindings/swift",
                 cSettings: [.headerSearchPath("src")]),
+
+        .target(name: "TreeSitterObjC",
+                path: "tree-sitter-objc",
+                sources: ["src/parser.c"],
+                publicHeadersPath: "bindings/swift",
+                cSettings: [.headerSearchPath("src")]),
+
+        .target(name: "TreeSitterCpp",
+                path: "tree-sitter-cpp",
+                sources: ["src/parser.c", "src/scanner.c"],
+                publicHeadersPath: "bindings/swift",
+                cSettings: [.headerSearchPath("src")]),
+
+        .target(name: "TreeSitterObjCpp",
+                path: "tree-sitter-objcpp",
+                sources: ["src/parser.c", "src/scanner.c"],
+                publicHeadersPath: "bindings/swift",
+                cSettings: [.headerSearchPath("src")]),
+
         .target(name: "SwiftTreeSitter", dependencies: ["tree-sitter"]),
+
         .testTarget(name: "SwiftTreeSitterTests",
-                    dependencies: ["SwiftTreeSitter", "TestTreeSitterSwift"]),
+                    dependencies: ["SwiftTreeSitter", "TreeSitterSwift"]),
+
         .target(name: "TreeSitterDocument", dependencies: ["SwiftTreeSitter"]),
+
         .testTarget(name: "TreeSitterDocumentTests",
-                    dependencies: ["TreeSitterDocument", "TestTreeSitterSwift"]),
+                    dependencies: ["TreeSitterDocument", "TreeSitterSwift"]),
     ]
 )
