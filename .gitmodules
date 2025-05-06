@@ -9,3 +9,7 @@
 	path = tree-sitter-objc
 	url = https://gitee.com/bugtree/tree-sitter-objc.git
 	branch = spm
+[submodule "tree-sitter-cpp"]
+	path = tree-sitter-cpp
+	url = https://gitee.com/bugtree/tree-sitter-cpp.git
+	branch = spm
