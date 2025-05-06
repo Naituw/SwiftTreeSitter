@@ -9,7 +9,7 @@ let package = Package(
         .library(name: "TreeSitterDocument", targets: ["TreeSitterDocument"]),
     ],
     dependencies: [
-        .package(url: "https://gitee.com/bugtree/tree-sitter", branch: "spm"),
+		.package(url: "https://gitee.com/bugtree/tree-sitter", branch: "spm"),
     ],
     targets: [
         // .target(name: "tree-sitter",
@@ -25,7 +25,7 @@ let package = Package(
         .target(
             name: "SwiftTreeSitter", 
             dependencies: [
-                    .product(name: "tree-sitter", package: "tree-sitter")
+                    .product(name: "TreeSitter", package: "TreeSitter")
                 ]
             ),
         .testTarget(name: "SwiftTreeSitterTests",
