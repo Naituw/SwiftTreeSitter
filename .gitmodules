@@ -5,3 +5,7 @@
 	path = tree-sitter-swift
 	url = https://gitee.com/bugtree/tree-sitter-swift.git
 	branch = swiftpm
+[submodule "tree-sitter-objc"]
+	path = tree-sitter-objc
+	url = https://gitee.com/bugtree/tree-sitter-objc.git
+	branch = spm
