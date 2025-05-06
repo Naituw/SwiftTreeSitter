@@ -20,16 +20,27 @@ extension Language {
 }
 
 extension Parser {
-    public static var swift: Parser {
-        Parser(language: .swift)
+	public static func swift() throws -> Parser {
+		let parser = Parser()
+		try parser.setLanguage(Language.swift)
+		return parser
+	}
+	
+    public static func objc() throws -> Parser {
+		let parser = Parser()
+		try parser.setLanguage(Language.objc)
+		return parser
     }
-    public static var objc: Parser {
-        Parser(language: .objc)
-    }
-    public static var cpp: Parser {
-        Parser(language: .cpp)
-    }
-    public static var objcCpp: Parser {
-        Parser(language: .objcCpp)
-    }
+    
+	public static func cpp() throws -> Parser {
+		let parser = Parser()
+		try parser.setLanguage(Language.cpp)
+		return parser
+	}
+	
+	public static func objcCpp() throws -> Parser {
+		let parser = Parser()
+		try parser.setLanguage(Language.objcCpp)
+		return parser
+	}
 }
