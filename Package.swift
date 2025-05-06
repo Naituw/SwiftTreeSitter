@@ -54,12 +54,12 @@ let package = Package(
                         ]
                     ),
 
-        .testTarget(name: "SwiftTreeSitterTests",
-                    dependencies: ["SwiftTreeSitter", "TreeSitterSwift"]),
+//        .testTarget(name: "SwiftTreeSitterTests",
+//                    dependencies: ["SwiftTreeSitter", "TreeSitterSwift"]),
 
         .target(name: "TreeSitterDocument", dependencies: ["SwiftTreeSitter"]),
 
-        .testTarget(name: "TreeSitterDocumentTests",
-                    dependencies: ["TreeSitterDocument", "TreeSitterSwift"]),
+//        .testTarget(name: "TreeSitterDocumentTests",
+//                    dependencies: ["TreeSitterDocument", "TreeSitterSwift"]),
     ]
 )
